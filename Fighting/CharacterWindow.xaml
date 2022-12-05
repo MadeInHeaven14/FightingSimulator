@@ -1,0 +1,56 @@
+﻿<Window x:Class="Fighting.CharacterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fighting"
+        mc:Ignorable="d"
+        Title="CharacterWindow" Height="516" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="731*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
+            <ListView x:Name="ListViewFighters" Height="235" SelectionChanged="ListViewFighters_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn x:Name="c_Name" DisplayMemberBinding="{Binding Path=Name}">Name</GridViewColumn>
+                        <GridViewColumn x:Name="c_Strength" DisplayMemberBinding="{Binding Path=Strength}">Strength</GridViewColumn>
+                        <GridViewColumn x:Name="c_Dexterity" DisplayMemberBinding="{Binding Path=Dexterity}">Dexterity</GridViewColumn>
+                        <GridViewColumn x:Name="c_Luck" DisplayMemberBinding="{Binding Path=Luck}">Luck</GridViewColumn>
+                        <GridViewColumn x:Name="c_Constitution" DisplayMemberBinding="{Binding Path=Constitution}">Constitution</GridViewColumn>
+                        <GridViewColumn x:Name="c_Intelligence" DisplayMemberBinding="{Binding Path=Intelligence}">Intelligence</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Lvl}">Lvl</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <Label Name="lb_Name" Margin="0,0,0,191" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63">Name</Label>
+        <TextBox Name="tb_Name" FontSize="16" FontWeight="Bold" Margin="63,0,0,214" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="103" IsEnabled="False"></TextBox>
+        <Label Name="lb_Strength" Margin="0,0,0,156" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80">Strength</Label>
+        <Label Name="lb_StrengthValue" Margin="83,0,0,155" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63">1</Label>
+        <Button x:Name="Plus_Strength_button" FontSize="16" FontWeight="Bold" Margin="131,0,0,174" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="35" Click="Plus_Strength_button_Click">+</Button>
+        <Label Name="lb_Dexterity" Margin="0,0,0,109" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80">Dexterity</Label>
+        <Label Name="lb_DexterityValue" Margin="83,0,0,109" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63">1</Label>
+        <Button x:Name="Plus_Dexterity_button" FontSize="16" FontWeight="Bold" Margin="131,0,0,126" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="35" Click="Plus_Dexterity_button_Click">+</Button>
+        <Label Name="lb_Luck" Margin="254,0,0,154" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80">Luck</Label>
+        <Label Name="lb_LuckValue" Margin="315,0,0,153" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63">1</Label>
+        <Button x:Name="Plus_Luck_button" FontSize="16" FontWeight="Bold" Margin="365,0,0,173" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="35" Click="Plus_Luck_button_Click">+</Button>
+        <Label Name="lb_Constitution" Margin="254,0,0,109" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="108">Constitution</Label>
+        <Label Name="lb_ConstitutionValue" Margin="367,0,0,108" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63">1</Label>
+        <Button x:Name="Plus_Constitution_button" FontSize="16" FontWeight="Bold" Margin="414,0,0,126" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="35" Click="Plus_Constitution_button_Click">+</Button>
+        <Label Name="lb_Intelligence" Margin="0,0,0,62" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="98">Intelligence</Label>
+        <Label Name="lb_IntelligenceValue" Margin="103,0,0,61" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="64">1</Label>
+
+        <Label Name="lb_Lvl" Margin="557,0,0,148" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80">Lvl</Label>
+        <Label Name="lb_LvlValue" Margin="597,0,0,147" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63">0</Label>
+        <Label Name="lb_Exp" Margin="557,0,0,109" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80">Exp</Label>
+        <Label Name="lb_ExpValue" Margin="597,0,0,107" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63">0</Label>
+        <Button x:Name="Plus_Intelligence_button" FontSize="16" FontWeight="Bold" Margin="148,0,0,80" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="36" Click="Plus_Intelligence_button_Click">+</Button>
+        <Button x:Name="Redact_button" FontSize="18" FontWeight="Bold" Margin="343,0,0,10" HorizontalAlignment="Left" Width="114" Height="38" VerticalAlignment="Bottom" Click="Redact_button_Click">Redact</Button>
+        <Label Name="lb_Point" Margin="662,0,0,201" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Grid.ColumnSpan="2">Point</Label>
+        <Label Name="lb_PointValue" Margin="727,0,0,200" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63" Grid.ColumnSpan="2">0</Label>
+        <Button x:Name="Back_button" FontSize="18" FontWeight="Bold" Margin="684,0,0,14" HorizontalAlignment="Left" Width="106" Grid.ColumnSpan="2" Height="29" VerticalAlignment="Bottom" Click="Back_button_Click">Back</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,84 @@
+﻿<Window x:Class="Fighting.FightWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fighting"
+        mc:Ignorable="d"
+        Title="FightWindow" Height="643" Width="800">
+    <Grid HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Label Name="lb_Step" Margin="212,0,-468,-194" Grid.Column="1" Height="61" VerticalAlignment="Bottom" FontSize="22" FontWeight="Bold"></Label>
+        <Label Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130" FontWeight="Bold" FontSize="16" Margin="0,6,0,0" Grid.ColumnSpan="2">First player:</Label>
+        <ComboBox Name="cb_FirstPlayer" Margin="0,44,0,-44" SelectionChanged="cb_FirstPlayer_SelectionChanged" Grid.ColumnSpan="2"></ComboBox>
+        <Label FontWeight="Bold" FontSize="16" Margin="513,0,-637,-3" Height="40" VerticalAlignment="Bottom" Grid.Column="1">Second player:</Label>
+        <ComboBox Name="cb_SecondPlayer" Margin="0,0,-656,-44" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="149" Grid.Column="1" SelectionChanged="cb_SecondPlayer_SelectionChanged" IsEnabled="False"/>
+        <Label Name="lb_FirstPlayerHP" Margin="0,0,0,-89" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">HP:</Label>
+        <ProgressBar x:Name="pb_FirstPlayerHP" Margin="65,0,-65,-79" Height="20" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></ProgressBar>
+        <Label Name="lb_FirstPlayer_HPValue" Margin="0,0,-65,-79" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="130" FontSize="10" Grid.ColumnSpan="2"></Label>
+        <Label Name="lb_FirstPlayerMana" Margin="0,0,0,-129" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">Mana:</Label>
+        <ProgressBar x:Name="pb_FirstPlayerMana" Margin="65,0,-65,-114" Height="20" VerticalAlignment="Bottom" Grid.ColumnSpan="2" ></ProgressBar>
+        <Label Name="lb_FirstPlayer_ManaValue" Margin="0,0,-65,-114" FontSize="10" HorizontalAlignment="Right" Width="130" Height="20" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></Label>
+        <Label Name="lb_FirstPlayerPhAttack" Margin="0,0,0,-169" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">PhAtttack:</Label>
+        <Label Name="lb_FirstPlayerPhAttackValue" Margin="93,0,0,-169" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></Label>
+        <Label Name="lb_FirstPlayerEvasion" Margin="0,0,0,-214" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">Evasion:</Label>
+        <Label Name="lb_FirstPlayerEvasionValue" Margin="0,0,-93,-214" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></Label>
+        <Label Name="lb_FirstPlayerCrtChance" Margin="0,0,0,-254" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">Crt Chance:</Label>
+        <Label Name="lb_FirstPlayerCrtChanceValue" Margin="0,0,-62,-254" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="86" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></Label>
+        <Label Name="lb_FirstPlayerMageAttack" Margin="0,0,0,-294" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">MageAttack:</Label>
+        <Label Name="lb_FirstPlayerMageAttackValue" Margin="0,0,-147,-294" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="171" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></Label>
+        <Label Name="lb_FirstPlayerBlockBreak" Margin="0,0,0,-342" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">BlockBreak:</Label>
+        <Label Name="lb_FirstPlayerBlockBreakValue" Margin="0,0,-124,-342" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="148" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></Label>
+        <Label Name="lb_FirstPlayeAttack" Margin="0,0,0,-387" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">Attack:</Label>
+        <ComboBox Name="cb_FirstPlayerAttack" Margin="0,425,0,-425" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Head"/>
+            <ComboBoxItem Content="Arms"/>
+            <ComboBoxItem Content="Body"/>
+            <ComboBoxItem Content="Legs"/>
+        </ComboBox>
+        <Label Name="lb_FirstPlayerBlock" Margin="0,0,0,-497" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Width="130" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">Block:</Label>
+        <ComboBox Name="cb_FirstPlayerBlock" Margin="0,537,0,-537" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Head"/>
+            <ComboBoxItem Content="Arms"/>
+            <ComboBoxItem Content="Body"/>
+            <ComboBoxItem Content="Legs"/>
+        </ComboBox>
+        <Label Name="lb_SecondPlayerHP" Margin="0,0,-656,-89" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="49" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:HP</Label>
+        <ProgressBar x:Name="pb_SecondPlayerHP" Margin="448,0,-572,-79" Height="20" VerticalAlignment="Bottom" Grid.Column="1" ></ProgressBar>
+        <Label Name="lb_SecondPlayer_HPValue" Margin="0,0,-572,-79" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="130" FontSize="10" Grid.Column="1"/>
+        <Label Name="lb_SecondPlayerMana" Margin="0,0,-656,-129" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="65" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:Mana</Label>
+        <ProgressBar x:Name="pb_SecondPlayerMana" Margin="448,0,-572,-114" Height="20" VerticalAlignment="Bottom" Grid.Column="1" ></ProgressBar>
+        <Label Name="lb_SecondPlayer_ManaValue" Margin="0,0,-572,-114" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="130" FontSize="10" Grid.Column="1"/>
+        <Label Name="lb_SecondPlayerPhAttack" Margin="0,0,-656,-167" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="96" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:PhAtttack</Label>
+        <Label Name="lb_SecondPlayerPhAttackValue" Margin="513,0,-555,-167" FontWeight="Bold" FontSize="16" Grid.Column="1" Height="40" VerticalAlignment="Bottom"></Label>
+        <Label Name="lb_SecondPlayerEvasion" Margin="0,0,-656,-214" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="74" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:Evasion</Label>
+        <Label Name="lb_SecondPlayerEvasionValue" Margin="0,0,-572,-214" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="41" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
+        <Label Name="lb_SecondPlayerCrtChance" Margin="0,0,-656,-254" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="104" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:Crt Chance</Label>
+        <Label Name="lb_SecondPlayerCrtChanceValue" Margin="0,0,-547,-254" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="57" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
+        <Label Name="lb_SecondPlayerMageAttack" Margin="0,0,-656,-294" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="109" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:MageAttack</Label>
+        <Label Name="lb_SecondPlayerMageAttackValue" Margin="0,0,-547,-294" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="57" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
+        <Label Name="lb_SecondPlayerBlockBreak" Margin="553,0,-656,-342" FontWeight="Bold" FontSize="16" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:BlockBreak</Label>
+        <Label Name="lb_SecondPlayerBlockBreakValue" Margin="496,0,-542,-342" FontWeight="Bold" FontSize="16" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
+        <Label Name="lb_SecondPlayerAttack" Margin="0,0,-656,-387" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="130" Height="40" VerticalAlignment="Bottom" Grid.Column="1">Attack:</Label>
+        <ComboBox Name="cb_SecondPlayerAttack" Margin="532,425,-656,-425" Grid.Column="1">
+            <ComboBoxItem Content="Head"/>
+            <ComboBoxItem Content="Arms"/>
+            <ComboBoxItem Content="Body"/>
+            <ComboBoxItem Content="Legs"/>
+        </ComboBox>
+        <Label Name="lb_SecondPlayerBlock" Margin="0,0,-661,-495" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="130" Height="40" VerticalAlignment="Bottom" Grid.Column="1">Block:</Label>
+        <ComboBox Name="cb_SecondPlayerBlock" Margin="537,537,-661,-537" Grid.Column="1">
+            <ComboBoxItem Content="Head"/>
+            <ComboBoxItem Content="Arms"/>
+            <ComboBoxItem Content="Body"/>
+            <ComboBoxItem Content="Legs"/>
+        </ComboBox>
+        <Button x:Name="PhAtt_button" FontSize="18" FontWeight="Bold" Margin="212,267,-347,-267" Grid.Column="1" Visibility="Hidden" Click="PhAtt_button_Click">Physical Attack</Button>
+        <Button x:Name="MageAtt_button" FontSize="18" FontWeight="Bold" Margin="212,314,-347,-314" Grid.Column="1" Visibility="Hidden" Click="MageAtt_button_Click">Mage Attack</Button>
+        <Button x:Name="Heal_button" FontSize="18" FontWeight="Bold" Margin="212,360,-347,-360" Grid.Column="1" Visibility="Hidden" Click="Heal_button_Click">Heal</Button>
+        <ListBox x:Name="Step_ListBox" Grid.Column="1" Margin="125,451,-434,-543"></ListBox>
+    </Grid>
+</Window>

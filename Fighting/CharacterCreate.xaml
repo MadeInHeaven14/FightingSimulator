@@ -1,0 +1,36 @@
+﻿<Window x:Class="Fighting.CharacterCreate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fighting"
+        mc:Ignorable="d"
+        Title="CharacterCreate" Height="450" Width="421">
+    <Grid>
+        <Label Name="lb_Points" FontSize="18" FontWeight="Bold" Margin="284,20,0,0" HorizontalAlignment="Left" Width="85" Height="32" VerticalAlignment="Top">Points:</Label>
+        <Label Name="lb_PointsValue" FontSize="18" FontWeight="Bold" Margin="348,20,0,0" HorizontalAlignment="Left" Width="39" Height="32" VerticalAlignment="Top">15</Label>
+        <Label Name="lb_Name" FontSize="16" FontWeight="Bold" Height="30" Margin="0,22,0,0" HorizontalAlignment="Left" Width="77" VerticalAlignment="Top">Name</Label>
+        <TextBox x:Name="tb_Name" Margin="77,22,0,0" FontSize="16" HorizontalAlignment="Left" Width="155" Height="30" VerticalAlignment="Top"></TextBox>
+        <Label Name="lb_Strength" FontSize="16" FontWeight="Bold" Height="30" Margin="0,52,0,0" HorizontalAlignment="Left" Width="77" VerticalAlignment="Top">Strength</Label>
+        <Button x:Name="Minus_Strength_button" Margin="95,59,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Click="Minus_Strength_button_Click">-</Button>
+        <Label Name="lb_StrengthValue" FontSize="16" FontWeight="Bold" Height="30" Margin="130,54,0,0" HorizontalAlignment="Left" Width="42" VerticalAlignment="Top">1</Label>
+        <Button x:Name="Plus_Strength_button" Margin="172,59,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Click="Plus_Strength_button_Click">+</Button>
+        <Label x:Name="lb_Dexterity" FontSize="16" FontWeight="Bold" Height="30" Margin="0,82,0,0" HorizontalAlignment="Left" Width="90" VerticalAlignment="Top" Content="Dexterity"/>
+        <Button x:Name="Minus_Dexterity_button" Margin="95,89,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Content="-" Click="Minus_Dexterity_button_Click"/>
+        <Label x:Name="lb_DexterityValue" FontSize="16" FontWeight="Bold" Height="30" Margin="130,84,0,0" HorizontalAlignment="Left" Width="42" VerticalAlignment="Top" Content="1"/>
+        <Button x:Name="Plus_Dexterity_button" Margin="172,89,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Content="+" Click="Plus_Dexterity_button_Click"/>
+        <Label Name="lb_Luck" FontSize="16" FontWeight="Bold" Height="30" Margin="0,112,0,0" HorizontalAlignment="Left" Width="77" VerticalAlignment="Top">Luck</Label>
+        <Button x:Name="Minus_Luck_button" Margin="95,119,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Click="Minus_Luck_button_Click">-</Button>
+        <Label Name="lb_LuckValue" FontSize="16" FontWeight="Bold" Height="30" Margin="130,114,0,0" HorizontalAlignment="Left" Width="42" VerticalAlignment="Top">1</Label>
+        <Button x:Name="Plus_Luck_button" Margin="172,119,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Click="Plus_Luck_button_Click">+</Button>
+        <Label Name="lb_Constitution" FontSize="16" FontWeight="Bold" Height="30" Margin="0,142,0,0" HorizontalAlignment="Left" Width="105" VerticalAlignment="Top">Constitution</Label>
+        <Button x:Name="Minus_Constitution_button" Margin="110,149,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Click="Minus_Constitution_button_Click">-</Button>
+        <Label Name="lb_ConstitutionValue" FontSize="16" FontWeight="Bold" Height="30" Margin="145,144,0,0" HorizontalAlignment="Left" Width="32" VerticalAlignment="Top">1</Label>
+        <Button x:Name="Plus_Constitution_button" Margin="177,149,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Click="Plus_Constitution_button_Click">+</Button>
+        <Label Name="lb_Intelligence" FontSize="16" FontWeight="Bold" Height="30" Margin="0,172,0,0" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top">Intelligence</Label>
+        <Button x:Name="Minus_Intelligence_button" Margin="105,179,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Click="Minus_Intelligence_button_Click">-</Button>
+        <Label Name="lb_IntelligenceValue" FontSize="16" FontWeight="Bold" Height="30" Margin="140,174,0,0" HorizontalAlignment="Left" Width="37" VerticalAlignment="Top">1</Label>
+        <Button x:Name="Plus_Intelligence_button" Margin="172,179,0,0" HorizontalAlignment="Left" Width="23" Height="20" VerticalAlignment="Top" Click="Plus_Intelligence_button_Click">+</Button>
+        <Button Name="Create_button" Margin="0,372,0,0" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Width="100" Height="27" VerticalAlignment="Top" Click="Create_button_Click">Create</Button>
+    </Grid>
+</Window>
