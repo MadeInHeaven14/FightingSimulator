@@ -88,7 +88,7 @@ namespace Fighting
                     lb_SecondPlayerEvasionValue.Content = $"{SecondUnit.Evasion}%";
                     lb_FirstPlayerEvasionValue.Content = $"{FirstUnit.Evasion}%";
                     lb_SecondPlayerCrtChanceValue.Content = $"{SecondUnit.CrtChance}%";
-                    lb_FirstPlayerCrtChanceValue.Content = $"{SecondUnit.CrtChance}%";
+                    lb_FirstPlayerCrtChanceValue.Content = $"{FirstUnit.CrtChance}%";
                     lb_SecondPlayerBlockBreakValue.Content = $"{SecondUnit.BlockBreak}%";
                     lb_FirstPlayerBlockBreakValue.Content = $"{FirstUnit.BlockBreak}%";
                     lb_SecondPlayerMageAttackValue.Content = SecondUnit.MageAttack;
@@ -149,7 +149,7 @@ namespace Fighting
                     {
                         if (rnd.Next(0, 101) > SecondUnit.Evasion)
                         {
-                            if (rnd.Next(0, 101) < FirstUnit.CrtChance)
+                            if (rnd.Next(1, 101) < FirstUnit.CrtChance)
                             {
                                 if (FirstUnit.HP == 0)
                                 {
@@ -480,7 +480,7 @@ namespace Fighting
 
                     else
                     {
-                        if (rnd.Next(0, 101) < FirstUnit.BlockBreak)
+                        if (rnd.Next(1, 101) < FirstUnit.BlockBreak)
                         {
                             if (FirstUnit.HP == 0)
                             {
@@ -663,9 +663,9 @@ namespace Fighting
                 {
                     if (cb_SecondPlayerAttack.SelectedItem.ToString() != cb_FirstPlayerBlock.SelectedItem.ToString())
                     {
-                        if (rnd.Next(0, 101) > FirstUnit.Evasion)
+                        if (rnd.Next(1, 101) > FirstUnit.Evasion)
                         {
-                            if (rnd.Next(0, 101) < SecondUnit.CrtChance)
+                            if (rnd.Next(1, 101) < SecondUnit.CrtChance)
                             {
                                 if (SecondUnit.HP == 0)
                                 {
@@ -996,7 +996,7 @@ namespace Fighting
 
                     else
                     {
-                        if (rnd.Next(0, 101) < SecondUnit.BlockBreak)
+                        if (rnd.Next(1, 101) < SecondUnit.BlockBreak)
                         {
                             if (SecondUnit.HP == 0)
                             {
@@ -1185,9 +1185,9 @@ namespace Fighting
                     {
                         if (cb_FirstPlayerAttack.SelectedItem.ToString() != cb_SecondPlayerBlock.SelectedItem.ToString())
                         {
-                            if (rnd.Next(0, 101) > SecondUnit.Evasion)
+                            if (rnd.Next(1, 101) > SecondUnit.Evasion)
                             {
-                                if (rnd.Next(0, 101) < FirstUnit.CrtChance)
+                                if (rnd.Next(1, 101) < FirstUnit.CrtChance)
                                 {
                                     if (FirstUnit.HP == 0)
                                     {
@@ -1517,7 +1517,7 @@ namespace Fighting
 
                         else
                         {
-                            if (rnd.Next(0, 101) < FirstUnit.BlockBreak)
+                            if (rnd.Next(1, 101) < FirstUnit.BlockBreak)
                             {
                                 if (FirstUnit.HP == 0)
                                 {
@@ -1711,9 +1711,9 @@ namespace Fighting
                     {
                         if (cb_SecondPlayerAttack.SelectedItem.ToString() != cb_FirstPlayerBlock.SelectedItem.ToString())
                         {
-                            if (rnd.Next(0, 101) > FirstUnit.Evasion)
+                            if (rnd.Next(1, 101) > FirstUnit.Evasion)
                             {
-                                if (rnd.Next(0, 101) < SecondUnit.CrtChance)
+                                if (rnd.Next(1, 101) < SecondUnit.CrtChance)
                                 {
                                     if (SecondUnit.HP == 0)
                                     {
@@ -2044,7 +2044,7 @@ namespace Fighting
 
                         else
                         {
-                            if (rnd.Next(0, 101) < SecondUnit.BlockBreak)
+                            if (rnd.Next(1, 101) < SecondUnit.BlockBreak)
                             {
                                 if (SecondUnit.HP == 0)
                                 {

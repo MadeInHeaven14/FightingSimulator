@@ -48,7 +48,7 @@
         <Label Name="lb_Exp" Margin="557,0,0,109" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80">Exp</Label>
         <Label Name="lb_ExpValue" Margin="597,0,0,107" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63">0</Label>
         <Button x:Name="Plus_Intelligence_button" FontSize="16" FontWeight="Bold" Margin="148,0,0,80" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="36" Click="Plus_Intelligence_button_Click">+</Button>
-        <Button x:Name="Redact_button" FontSize="18" FontWeight="Bold" Margin="343,0,0,10" HorizontalAlignment="Left" Width="114" Height="38" VerticalAlignment="Bottom" Click="Redact_button_Click">Redact</Button>
+        <Button x:Name="Redact_button" FontSize="18" FontWeight="Bold" Margin="343,0,0,10" HorizontalAlignment="Left" Width="114" Height="38" VerticalAlignment="Bottom" Click="Redact_button_Click" IsEnabled="False">Redact</Button>
         <Label Name="lb_Point" Margin="662,0,0,201" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Grid.ColumnSpan="2">Point</Label>
         <Label Name="lb_PointValue" Margin="727,0,0,200" FontSize="16" FontWeight="Bold" Height="47" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="63" Grid.ColumnSpan="2">0</Label>
         <Button x:Name="Back_button" FontSize="18" FontWeight="Bold" Margin="684,0,0,14" HorizontalAlignment="Left" Width="106" Grid.ColumnSpan="2" Height="29" VerticalAlignment="Bottom" Click="Back_button_Click">Back</Button>

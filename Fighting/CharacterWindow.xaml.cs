@@ -26,6 +26,7 @@ namespace Fighting
         int Intelligence;
         int Point;
         Fighter fighter;
+        bool isWorking = true;
         public CharacterWindow()
         {
             InitializeComponent();
@@ -37,22 +38,31 @@ namespace Fighting
 
         private void ListViewFighters_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Fighter choosedFighter = (Fighter)ListViewFighters.SelectedItem;
-            tb_Name.Text = choosedFighter.Name;
-            lb_StrengthValue.Content = choosedFighter.Strength;
-            lb_DexterityValue.Content = choosedFighter.Dexterity;
-            lb_LuckValue.Content = choosedFighter.Luck;
-            lb_ConstitutionValue.Content = choosedFighter.Constitution;
-            lb_IntelligenceValue.Content = choosedFighter.Intelligence;
-            lb_LvlValue.Content = choosedFighter.Lvl;
-            lb_ExpValue.Content = choosedFighter.Exp;
-            lb_PointValue.Content = choosedFighter.Point;
-            Point = Convert.ToInt32(lb_PointValue.Content);
-            Strength = Convert.ToInt32(lb_StrengthValue.Content);
-            Dexterity = Convert.ToInt32(lb_DexterityValue.Content);
-            Luck = Convert.ToInt32(lb_LuckValue.Content);
-            Constitution = Convert.ToInt32(lb_ConstitutionValue.Content);
-            Intelligence = Convert.ToInt32(lb_IntelligenceValue.Content);
+            if (isWorking == true)
+            {
+                Fighter choosedFighter = (Fighter)ListViewFighters.SelectedItem;
+                tb_Name.Text = choosedFighter.Name;
+                lb_StrengthValue.Content = choosedFighter.Strength;
+                lb_DexterityValue.Content = choosedFighter.Dexterity;
+                lb_LuckValue.Content = choosedFighter.Luck;
+                lb_ConstitutionValue.Content = choosedFighter.Constitution;
+                lb_IntelligenceValue.Content = choosedFighter.Intelligence;
+                lb_LvlValue.Content = choosedFighter.Lvl;
+                lb_ExpValue.Content = choosedFighter.Exp;
+                lb_PointValue.Content = choosedFighter.Point;
+                Point = Convert.ToInt32(lb_PointValue.Content);
+                Strength = Convert.ToInt32(lb_StrengthValue.Content);
+                Dexterity = Convert.ToInt32(lb_DexterityValue.Content);
+                Luck = Convert.ToInt32(lb_LuckValue.Content);
+                Constitution = Convert.ToInt32(lb_ConstitutionValue.Content);
+                Intelligence = Convert.ToInt32(lb_IntelligenceValue.Content);
+                fighter = new Fighter(tb_Name.Text, Convert.ToInt32(lb_StrengthValue.Content), Convert.ToInt32(lb_DexterityValue.Content), Convert.ToInt32(lb_LuckValue.Content), Convert.ToInt32(lb_ConstitutionValue.Content), Convert.ToInt32(lb_IntelligenceValue.Content));
+                fighter.Name = tb_Name.Text;
+                fighter.Point = Convert.ToInt32(lb_PointValue.Content);
+                fighter.Exp = Convert.ToInt32(lb_ExpValue.Content);
+                fighter.Lvl = Convert.ToInt32(lb_LvlValue.Content);
+                Redact_button.IsEnabled = true;
+            }    
         }
 
         private void Plus_Strength_button_Click(object sender, RoutedEventArgs e)
@@ -137,6 +147,7 @@ namespace Fighting
 
         private void Redact_button_Click(object sender, RoutedEventArgs e)
         {
+            isWorking = false;
             fighter.Strength = Convert.ToInt32(lb_StrengthValue.Content);
             fighter.Dexterity = Convert.ToInt32(lb_DexterityValue.Content);
             fighter.Luck = Convert.ToInt32(lb_LuckValue.Content);
@@ -145,7 +156,7 @@ namespace Fighting
             fighter.Lvl = Convert.ToInt32(lb_LvlValue.Content);
             fighter.Exp = Convert.ToInt32(lb_ExpValue.Content);
             fighter.Point = Convert.ToInt32(lb_PointValue.Content);
-            foreach (var unit in FighterService.FighterList)
+            foreach (var unit in FighterService.FighterList.ToList())
             {
                 if (unit.Name == fighter.Name)
                 {
@@ -155,6 +166,8 @@ namespace Fighting
                     ListViewFighters.Items.Add(fighter);
                 }
             }
+            MainWindow win = new MainWindow();
+            win.Show();
             this.Close();
         }
 
