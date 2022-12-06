@@ -55,13 +55,13 @@
         <Label Name="lb_SecondPlayerPhAttack" Margin="0,0,-656,-167" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="96" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:PhAtttack</Label>
         <Label Name="lb_SecondPlayerPhAttackValue" Margin="513,0,-555,-167" FontWeight="Bold" FontSize="16" Grid.Column="1" Height="40" VerticalAlignment="Bottom"></Label>
         <Label Name="lb_SecondPlayerEvasion" Margin="0,0,-656,-214" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="74" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:Evasion</Label>
-        <Label Name="lb_SecondPlayerEvasionValue" Margin="0,0,-572,-214" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="189" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
+        <Label Name="lb_SecondPlayerEvasionValue" Margin="0,0,-572,-214" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="95" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
         <Label Name="lb_SecondPlayerCrtChance" Margin="0,0,-656,-254" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="104" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:Crt Chance</Label>
-        <Label Name="lb_SecondPlayerCrtChanceValue" Margin="0,0,-547,-254" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="105" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
+        <Label Name="lb_SecondPlayerCrtChanceValue" Margin="0,0,-547,-254" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="55" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
         <Label Name="lb_SecondPlayerMageAttack" Margin="0,0,-656,-294" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="109" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:MageAttack</Label>
-        <Label Name="lb_SecondPlayerMageAttackValue" Margin="0,0,-547,-294" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="105" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
+        <Label Name="lb_SecondPlayerMageAttackValue" Margin="0,0,-547,-294" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="55" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
         <Label Name="lb_SecondPlayerBlockBreak" Margin="553,0,-656,-342" FontWeight="Bold" FontSize="16" Height="40" VerticalAlignment="Bottom" Grid.Column="1">:BlockBreak</Label>
-        <Label Name="lb_SecondPlayerBlockBreakValue" Margin="448,0,-542,-342" FontWeight="Bold" FontSize="16" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
+        <Label Name="lb_SecondPlayerBlockBreakValue" Margin="498,0,-542,-342" FontWeight="Bold" FontSize="16" Height="40" VerticalAlignment="Bottom" Grid.Column="1"></Label>
         <Label Name="lb_SecondPlayerAttack" Margin="0,0,-656,-387" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="130" Height="40" VerticalAlignment="Bottom" Grid.Column="1">Attack:</Label>
         <ComboBox Name="cb_SecondPlayerAttack" Margin="532,425,-656,-425" Grid.Column="1">
             <ComboBoxItem Content="Head"/>

@@ -222,7 +222,7 @@ namespace Fighting
                                     }
                                 }
 
-                                else if (SecondUnit.HP - FirstUnit.PhAttack < 0 && pb_SecondPlayerHP.Value - FirstUnit.PhAttack < 0)
+                                else if (SecondUnit.HP - FirstUnit.PhAttack * 2 < 0 && pb_SecondPlayerHP.Value - FirstUnit.PhAttack * 2 < 0)
                                 {
                                     FirstExp += SecondUnit.HP;
                                     SecondUnit.HP = 0;
